@@ -1,10 +1,30 @@
 {% set title = title | default('thinkPLANK') %}
 <html>
   <head>
-    <title>{{ title }}</title>
+      <title>{{ title }}</title>
+      <link rel="stylesheet" href="/css/bootstrap.min.css">
+      <script type="text/javascript" src="/js/jquery.min.js"></script>
+      <script type="text/javascript" src="/js/bootstrap.min.js"></script>
   </head>
   <body>
-      {% block content %}
-      {% endblock %}
+      <div class="navbar navbar-fixed-top">
+          <div class="container">
+              <button type="button" class="navbar-toggle" data-toggle=".nav-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><img src="/img/tp.png" style="margin-top:2px;" /></a>
+              <div class="nav-collapse collapse">
+                  <ul class="nav navbar-nav">
+                      <li><a href="/">Home</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="container">
+          {% block content %}
+          {% endblock %}
+      </div>
   </body>
 </html>
